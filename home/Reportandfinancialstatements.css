@@ -1,0 +1,268 @@
+ header{
+        text-align: center;
+        color: darkgreen;
+         margin: -100px;
+    }
+    h1{
+        font-family: 'Sitka heading';
+        font-size: 60px;
+        margin-top: -250px; 
+    }
+    h3{
+        margin: -55px;
+        font-size: 30px;
+
+    }
+      body{
+        padding: 300px ;
+        font-family: 'Sitka heading';
+        text-align: left;
+        font-size: 20px;
+    }
+    nav{
+        text-align: center;
+    }
+
+ h4
+ {
+        margin: 25px;
+        font-size: 30px;
+        font-family: 'Sitka heading';
+
+}
+.cardcontainer{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        justify-content: center;
+        
+}
+.card{
+    border-radius: 8px;
+        box-shadow: 0 4px 8px rgb(85, 182, 90);
+        overflow: hidden;
+        width: 500px;
+        transition: transform 0.2s ease;
+        padding: 20px;
+}
+.card:hover{
+    transform: translateY(-5px);
+    border: solid thick  rgb(85, 182, 90);
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+}
+.cardcontent{
+     margin: 0 0 10px;
+
+}
+.cardcontent p {
+        font-size: 0.95em;
+        color: Black;
+        margin-bottom: 15px;
+    }
+       @media (max-width: 600px) {
+        .card {
+            width: 100%;
+        }
+    }
+
+
+  .Home{
+        background-color: hsl(133, 100%, 22%);
+        color: white;
+
+        padding: 15px  15px;
+        margin: 5px;
+        border: none;
+        cursor: pointer;
+        display:inline-block;
+        color: inherit;           
+        text-decoration: none;
+    }
+        footer{
+        text-align: center;
+    }
+    .Whatwedo{
+        display:inline-block;
+    }
+    .Whatwedo button{
+        background-color: hsl(133, 100%, 22%);
+        color: white;
+        padding: 15px  15px;
+        margin: 5px;
+        border: none;
+        cursor: pointer;
+    }
+    .Whatwedo a{
+        display:block;
+        color: hsl(133, 100%, 33%);
+        text-decoration: none;
+        padding: 10px 15px;
+    }
+    .Whatwedo .Whatwedocontent{
+        display:none;
+        position:absolute;
+        background-color:hsl(0, 0%, 95%);
+        min-width:100px;
+        box-shadow:2px 2px 5px hsla(135, 91%, 18%, 0.5);
+    }
+    .Whatwedo:hover .Whatwedocontent{
+        display:block;
+    }
+    .Whatwedo:hover button{
+        background-color:hsl(133, 100%, 33%);
+
+    }
+    .Whatwedo a:hover{
+        background-color:hsl(0, 0%, 90%);
+    }
+    
+
+    .Newsandevents{
+        display: inline-block;
+    }
+    .Newsandevents button{
+        background-color:hsl(133, 100%, 22%);
+        color: white;
+        padding: 15px  15px;
+        margin: 5px;
+        border: none;
+        cursor: pointer;
+    }
+    .Newsandevents a{
+        display:block;
+        color: hsl(133, 100%, 33%);;
+        text-decoration: none;
+        padding: 10px 15px;
+    }
+    .Newsandevents .Newsandeventscontent{
+        display:none;
+        position:absolute;
+        background-color:hsl(0, 0%, 95%);
+        min-width:100px;
+        box-shadow:2px 2px 5px hsla(135, 91%, 18%, 0.5);
+    }
+    .Newsandevents:hover .Newsandeventscontent{
+        display:block;
+    }
+    .Newsandevents:hover button{
+        background-color:hsl(133, 100%, 33%);
+
+    }
+    .Newsandevents a:hover{
+        background-color:hsl(0,0%, 90%);
+    }
+
+
+
+    .Roots{
+        display: inline-block;
+    }
+    .Roots button{
+        background-color:hsl(133, 100%, 22%);
+        color: white;
+        padding: 15px  15px;
+        margin: 5px;
+        border: none;
+        cursor: pointer;
+    }
+    .Roots a{
+        display:block;
+        color: hsl(133, 100%, 33%);;
+        text-decoration: none;
+        padding: 10px 15px;
+    }
+    .Roots .Rootscontent{
+        display:none;
+        position:absolute;
+        background-color:hsl(0, 0%, 95%);
+        min-width:100px;
+        box-shadow:2px 2px 5px hsla(135, 91%, 18%, 0.5);
+    }
+    .Roots:hover .Rootscontent{
+        display:block;
+    }
+    .Roots:hover button{
+        background-color:hsl(133, 100%, 33%);
+
+    }
+    .Roots a:hover{
+        background-color:hsl(0,0%, 90%);
+    }
+
+
+
+    .Snippets{
+        display: inline-block;
+    }
+    .Snippets button{
+        background-color: hsl(133, 100%, 22%);
+        color: white;
+       padding: 15px  15px;
+        margin: 5px;
+        border: none;
+        cursor: pointer;
+    }
+    .Snippets a{
+        display:block;
+        color: hsl(133, 100%, 33%);;
+        text-decoration: none;
+        padding: 10px 15px;
+    }
+    .Snippets .Snippetscontent{
+        display:none;
+        position:absolute;
+        background-color:hsl(0, 0%, 95%);
+        min-width:100px;
+        box-shadow:2px 2px 5px hsla(135, 91%, 18%, 0.5);
+    }
+    .Snippets:hover .Snippetscontent{
+        display:block;
+    }
+    .Snippets:hover button{
+        background-color:hsl(133, 100%, 33%);
+
+    }
+    .Snippets a:hover{
+        background-color:hsl(0,0%, 90%);
+    }
+
+
+
+
+.Contactus{
+        display: inline-block;
+    }
+    .Contactus button{
+        background-color:hsl(133, 100%, 22%);
+        color: white;
+       padding: 15px  15px;
+        margin: 5px;
+        border: none;
+        cursor: pointer;
+    }
+    .Contactus a{
+        display:block;
+        color: hsl(133, 100%, 33%);;
+        text-decoration: none;
+        padding: 10px 15px;
+    }
+    .Contactus .Contactuscontent{
+        display:none;
+        position:absolute;
+        background-color:hsl(0, 0%, 95%);
+        min-width:100px;
+        box-shadow:2px 2px 5px hsla(135, 91%, 18%, 0.5);
+    }
+    .Contactus:hover .Contactuscontent{
+        display:block;
+    }
+    .Contactus:hover button{
+        background-color:hsl(133, 100%, 33%);
+
+    }
+    .Contactus a:hover{
+        background-color:hsl(0,0%, 90%);
+    }
+
+
+

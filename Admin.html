@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+     <link
+        rel="stylesheet"
+        href="Admin.css"
+        />
+ 
+    </head>
+    <header>
+   <h1>Admin Page</h1>
+   </header>
+<body>
+    
+<div class="admin-container">
+    <label >Website Title:</label>
+  
+    <input type="text" id="title" />
+   
+
+    <label >Heading:</label>
+  
+    <input type="text" id="heading" />
+    
+
+    <label >Paragraph:</label>
+ 
+    <textarea id="paragraph" ></textarea>
+    
+    <div class="admin-button">
+    <button onclick="saveContent()">Save Changes</button>
+    <button onclick="resetContent()">Reset to Default</button>
+</div>
+    <p>
+        <a href="homePage1.html" class="backtopage">Back to Website</a>
+    </p>
+    </div>
+
+    <script>
+        async function loadAdminForm() {
+            const savedContent = localStorage.getItem("websiteContent");
+
+            if (savedContent) {
+                const data = JSON.parse(savedContent);
+                fillForm(data);
+            } else {
+                const response = await fetch("admincontent.json");
+                const data = await response.json();
+                fillForm(data);
+            }
+        }
+
+        function fillForm(data) {
+            document.getElementById("title").value = data.title;
+            document.getElementById("heading").value = data.heading;
+            document.getElementById("paragraph").value = data.paragraph;
+        }
+
+        function saveContent() {
+             const title = document.getElementById("title").value;
+
+              if (title === "") {
+            alert("Title cannot be empty!");
+            return;
+             }
+            const data = {
+                title: document.getElementById("title").value,
+                heading: document.getElementById("heading").value,
+                paragraph: document.getElementById("paragraph").value
+            };
+
+            localStorage.setItem("websiteContent", JSON.stringify(data));
+            alert("Content saved");
+        }
+
+        function resetContent() {
+            localStorage.removeItem("websiteContent");
+            alert("Content reset to default");
+            loadAdminForm();
+        }
+
+        loadAdminForm();
+        
+    </script>
+
+</body>
+</html>

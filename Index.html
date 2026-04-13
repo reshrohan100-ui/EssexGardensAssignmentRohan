@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <h1 id="title"></h1>
+    <h2 id="heading"></h2>
+    <p id="paragraph"></p>
+
+    <p>
+        <a href="admin.html">Go to Admin Page</a>
+    </p>
+
+    <script>
+        async function loadContent() {
+            
+            const savedContent = localStorage.getItem("websiteContent");
+
+            if (savedContent) {
+                const data = JSON.parse(savedContent);
+                displayContent(data);
+            } else {
+               
+                const response = await fetch("content.json");
+                const data = await response.json();
+                displayContent(data);
+            }
+        }
+
+        function displayContent(data) {
+            document.getElementById("title").textContent = data.title;
+            document.getElementById("heading").textContent = data.heading;
+            document.getElementById("paragraph").textContent = data.paragraph;
+        }
+
+        loadContent();
+    </script>
+</body>
+</html>
